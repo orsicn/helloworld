@@ -1,0 +1,8 @@
+var map = L.map('map').setView([44.5, -123.3], 6);
+fetch('data/airports.geojson')
+  .then(response => response.json())
+  .then(data => {
+    console.log('GeoJSON loaded:', data);
+    L.geoJSON(data).addTo(map);
+  })
+  .catch(error => console.error('Error loading GeoJSON:', error));
