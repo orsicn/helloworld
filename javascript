@@ -1,7 +1,4 @@
-fetch('/data/airports.geojson')
-.then(reponse => reponse.json())
-.then(reponse => {console.log(reponse)})
-.catch(error => console.error('Error: 'error))
+
 
 
  fetch('data/airports.geojson')
